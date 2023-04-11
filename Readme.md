@@ -57,3 +57,22 @@ if part_d <= part_n * part_m and part_d % 2 == 0:
 else:
     print("Нет")
 
+0000
+
+**Задача про монеты**
+import random
+#ввод количества монет
+coins = int(input("Введи кол-во монет: "))
+#задаем переменную для хранения списка решка или герб
+random_list = []
+#создаем цикл для создаем списка из случайных значение
+for i in range(coins):
+    random_list.append(random.randint(0, 1))
+#создаем список строковых данных - решка или герб
+random_list = [ "решка" if i == 0 else "герб" for i in random_list ]
+#вывод случайного списка из кол-ва монет
+print(random_list)
+#переменная которая хранит только значение решка, т.е сколько раз
+#перевернуть монеты
+count_reshka = random_list.count("решка")
+print("Чтобы все монеты стали гербом, нужно:", count_reshka, "раз")
